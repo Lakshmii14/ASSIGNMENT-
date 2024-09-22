@@ -1,0 +1,6 @@
+let text = "The quick brown fox jumps over the lazy dog.";
+
+// Check if the word "cat" exists in the string
+let wordToCheck = "cat";
+let wordExists = text.includes(wordToCheck);
+console.log(`Does the word "${wordToCheck}" exist in the text?`, wordExists);  // Prints: Does the word "cat" exist in the text? false
