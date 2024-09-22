@@ -1,0 +1,14 @@
+let sentence = "JavaScript provides many methods to manipulate strings effectively.";
+
+// Using slice method
+let slicePortion = sentence.slice(11, 29);
+console.log("Using slice:", slicePortion);  // Prints: Using slice: provides many me
+
+
+// Using substring method
+let substringPortion = sentence.substring(11, 29);
+console.log("Using substring:", substringPortion);  // Prints: Using substring: provides many me
+
+// Using substr method
+let substrPortion = sentence.substr(11, 18);
+console.log("Using substr:", substrPortion);  // Prints: Using substr: provides many me
