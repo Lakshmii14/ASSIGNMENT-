@@ -1,0 +1,5 @@
+let words = "apple,banana,orange,grape";
+
+// Convert the string into an array of words
+let wordsArray = words.split(",");
+console.log("Resulting array:", wordsArray);  // Prints: Resulting array: [ 'apple', 'banana', 'orange', 'grape' ]
