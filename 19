@@ -1,0 +1,15 @@
+let strNumber = "123.456";
+
+// Convert using different methods
+let numberUsingNumber = Number(strNumber);
+let numberUsingParseInt = parseInt(strNumber);
+let numberUsingParseFloat = parseFloat(strNumber);
+
+// Print the results
+console.log("Using Number():", numberUsingNumber);       // Prints: Using Number(): 123.456
+console.log("Using parseInt():", numberUsingParseInt);   // Prints: Using parseInt(): 123
+console.log("Using parseFloat():", numberUsingParseFloat); // Prints: Using parseFloat(): 123.456
+
+// Compare the outputs
+console.log("Are Number() and parseFloat() equal?", numberUsingNumber === numberUsingParseFloat); // true
+console.log("Are parseInt() and parseFloat() equal?", numberUsingParseInt === numberUsingParseFloat); // false
