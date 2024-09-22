@@ -1,0 +1,5 @@
+let str = "   Hello, World!   ";
+
+// Trim the extra spaces
+let trimmedStr = str.trim();
+console.log("Trimmed string:", `"${trimmedStr}"`);  // Prints: "Hello, World!"
