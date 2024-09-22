@@ -1,0 +1,7 @@
+let text = "Hello, World!";
+
+let upperCaseText = text.toUpperCase();
+console.log("Uppercase:", upperCaseText);  // Prints: Uppercase: HELLO, WORLD!
+
+let lowerCaseText = text.toLowerCase();
+console.log("Lowercase:", lowerCaseText);  // Prints: Lowercase: hello, world!
