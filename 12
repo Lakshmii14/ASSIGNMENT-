@@ -1,0 +1,12 @@
+let sentence = "JavaScript is a versatile and powerful programming language.";
+
+// Find the position of the word "versatile"
+let wordToFind = "versatile";
+let position = sentence.indexOf(wordToFind);
+console.log(`Position of the word "${wordToFind}":`, position);  // Prints: Position of the word "versatile": 16
+
+// Replace the word "versatile" with "flexible"
+let wordToReplace = "versatile";
+let newWord = "flexible";
+let updatedSentence = sentence.replace(wordToReplace, newWord);
+console.log("Updated sentence:", updatedSentence);  // Prints: Updated sentence: JavaScript is a flexible and powerful programming language.
