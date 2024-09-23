@@ -1,0 +1,21 @@
+let num = 456;
+
+// Using toString() Method
+let strUsingToString = num.toString();
+console.log("Using toString():", strUsingToString);  // Prints: Using toString(): 456
+
+// Using String() Function
+let strUsingString = String(num);
+console.log("Using String():", strUsingString);  // Prints: Using String(): 456
+
+// Using Template Literals
+let strUsingTemplateLiterals = `${num}`;
+console.log("Using Template Literals:", strUsingTemplateLiterals);  // Prints: Using Template Literals: 456
+
+// Using concat() Method
+let strUsingConcat = ''.concat(num);
+console.log("Using concat():", strUsingConcat);  // Prints: Using concat(): 456
+
+// Using + "" Operator
+let strUsingPlusOperator = num + "";
+console.log("Using + operator:", strUsingPlusOperator);  // Prints: Using + operator: 456
