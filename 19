@@ -1,0 +1,21 @@
+let isTrue = true;
+
+// Convert to String and Print the Result
+
+// Using toString() Method
+let strUsingToString = isTrue.toString();
+console.log("Boolean to string using toString():", strUsingToString);  // Prints: Boolean to string using toString(): true
+
+// Using String() Function
+let strUsingString = String(isTrue);
+console.log("Boolean to string using String():", strUsingString);  // Prints: Boolean to string using String(): true
+
+// Convert to Number and Print the Result
+
+// Using Number() Function
+let numUsingNumber = Number(isTrue);
+console.log("Boolean to number using Number():", numUsingNumber);  // Prints: Boolean to number using Number(): 1
+
+// Using Unary + Operator
+let numUsingUnaryPlus = +isTrue;
+console.log("Boolean to number using unary + operator:", numUsingUnaryPlus);  // Prints: Boolean to number using unary + operator: 1
