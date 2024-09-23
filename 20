@@ -1,0 +1,18 @@
+let num1 = 0;
+let num2 = 1;
+let str1 = "";
+let str2 = "Hello!";
+let nullValue = null;
+let undefinedValue;
+
+// Convert numbers to boolean
+let boolNum1 = Boolean(num1);
+let boolNum2 = Boolean(num2);
+console.log("Boolean of num1 (0):", boolNum1);  // Prints: Boolean of num1 (0): false
+console.log("Boolean of num2 (1):", boolNum2);  // Prints: Boolean of num2 (1): true
+
+// Convert strings to boolean
+let boolStr1 = Boolean(str1);
+let boolStr2 = Boolean(str2);
+console.log("Boolean of str1 (empty string):", boolStr1);  // Prints: Boolean of str1 (empty string): false
+console.log
