@@ -1,0 +1,14 @@
+function checkVotingEligibility(age) {
+    if (age >= 18) {
+        return "Eligible to vote";
+    } else {
+        return "Not eligible to vote";
+    }
+}
+
+
+let age1 = 20;
+let age2 = 16;
+
+console.log("Age:", age1, "-", checkVotingEligibility(age1));  // Prints: Age: 20 - Eligible to vote
+console.log("Age:", age2, "-", checkVotingEligibility(age2));  // Prints: Age: 16 - Not eligible to vote
