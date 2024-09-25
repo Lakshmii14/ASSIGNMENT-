@@ -1,0 +1,19 @@
+let colors = ["red", "green", "blue", "yellow", "purple"];
+
+// Remove the color "blue" from the array
+let blueIndex = colors.indexOf("blue");
+if (blueIndex !== -1) {
+    colors.splice(blueIndex, 1);
+}
+console.log("After removing 'blue':", colors);  // Prints: After removing 'blue': ["red", "green", "yellow", "purple"]
+
+// Add "orange" and "pink" after "green"
+let greenIndex = colors.indexOf("green");
+if (greenIndex !== -1) {
+    colors.splice(greenIndex + 1, 0, "orange", "pink");
+}
+console.log("After adding 'orange' and 'pink' after 'green':", colors);  // Prints: After adding 'orange' and 'pink' after 'green': ["red", "green", "orange", "pink", "yellow", "purple"]
+
+// Create a sub-array with the first three colors and print it
+let firstThreeColors = colors.slice(0, 3);
+console.log("Sub-array with the first three colors:", firstThreeColors);  // Prints: Sub-array with the first three colors: ["red", "green", "orange"]
