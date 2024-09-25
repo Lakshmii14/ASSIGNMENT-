@@ -1,0 +1,17 @@
+let fruits = ["apple", "banana", "mango"];
+
+// Add a new fruit "orange" to the end of the array
+fruits.push("orange");
+console.log("After adding 'orange':", fruits);  // Prints: After adding 'orange': ["apple", "banana", "mango", "orange"]
+
+// Remove the last fruit from the array
+fruits.pop();
+console.log("After removing the last fruit:", fruits);  // Prints: After removing the last fruit: ["apple", "banana", "mango"]
+
+// Remove the first fruit from the array
+fruits.shift();
+console.log("After removing the first fruit:", fruits);  // Prints: After removing the first fruit: ["banana", "mango"]
+
+// Add "grape" to the beginning of the array
+fruits.unshift("grape");
+console.log("After adding 'grape' to the beginning:", fruits);  // Prints: After adding 'grape' to the beginning: ["grape", "banana", "mango"]
