@@ -1,0 +1,18 @@
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return "Leap Year";
+    } else {
+        return "Not a Leap Year";
+    }
+}
+
+
+let year1 = 2000;
+let year2 = 1900;
+let year3 = 2024;
+let year4 = 2023;
+
+console.log("Year:", year1, "-", isLeapYear(year1));  // Prints: Year: 2000 - Leap Year
+console.log("Year:", year2, "-", isLeapYear(year2));  // Prints: Year: 1900 - Not a Leap Year
+console.log("Year:", year3, "-", isLeapYear(year3));  // Prints: Year: 2024 - Leap Year
+console.log("Year:", year4, "-", isLeapYear(year4));  // Prints: Year: 2023 - Not a Leap Year
