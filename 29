@@ -1,0 +1,29 @@
+function calculateDiscount(totalAmount) {
+    let discountPercentage = 0;
+
+    if (totalAmount < 50) {
+        discountPercentage = 0;
+    } else if (totalAmount >= 50 && totalAmount < 100) {
+        discountPercentage = 10;
+    } else if (totalAmount >= 100 && totalAmount < 200) {
+        discountPercentage = 20;
+    } else {
+        discountPercentage = 30;
+    }
+
+    let discountAmount = (discountPercentage / 100) * totalAmount;
+    let finalAmount = totalAmount - discountAmount;
+
+    return finalAmount;
+}
+
+
+let purchase1 = 45;
+let purchase2 = 75;
+let purchase3 = 150;
+let purchase4 = 250;
+
+console.log("Final amount for $45 purchase:", calculateDiscount(purchase1));  // Prints: Final amount for $45 purchase: 45
+console.log("Final amount for $75 purchase:", calculateDiscount(purchase2));  // Prints: Final amount for $75 purchase: 67.5
+console.log("Final amount for $150 purchase:", calculateDiscount(purchase3)); // Prints: Final amount for $150 purchase: 120
+console.log("Final amount for $250 purchase:", calculateDiscount(purchase4)); // Prints: Final amount for $250 purchase: 175
