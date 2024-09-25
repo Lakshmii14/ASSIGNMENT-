@@ -1,0 +1,5 @@
+let words = ["Hello", "world", "this", "is", "JavaScript"];
+
+// Join the words into a single sentence with spaces
+let sentence = words.join(" ");
+console.log("Joined sentence:", sentence);  // Prints: Joined sentence: Hello world this is JavaScript
