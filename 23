@@ -1,0 +1,10 @@
+let numbers = [10, 20, 30, 40, 50];
+
+// Print the length of the array
+console.log("Length of the array:", numbers.length);  // Prints: Length of the array: 5
+
+// Access and print the first and last elements of the array
+let firstElement = numbers[0];
+let lastElement = numbers[numbers.length - 1];
+console.log("First element:", firstElement);  // Prints: First element: 10
+console.log("Last element:", lastElement);    // Prints: Last element: 50
