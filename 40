@@ -1,0 +1,25 @@
+function isPrime(num) {
+    // Check for numbers less than 2
+    if (num < 2) {
+        return false; 
+
+    // Check for factors from 2 to the square root of num
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false; 
+        }
+    }
+
+    return true; 
+}
+
+
+console.log(isPrime(2));   // Prints: true
+console.log(isPrime(3));   // Prints: true
+console.log(isPrime(4));   // Prints: false
+console.log(isPrime(17));  // Prints: true
+console.log(isPrime(18));  // Prints: false
+console.log(isPrime(19));  // Prints: true
+console.log(isPrime(1));   // Prints: false
+console.log(isPrime(0));   // Prints: false
+console.log(isPrime(-5));  // Prints: false
