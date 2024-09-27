@@ -1,0 +1,41 @@
+function advancedCalculator(num1, num2, operator) {
+    let result;
+
+    switch (operator) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+            if (num2 === 0) {
+                return "Error: Division by zero is not allowed.";
+            }
+            result = num1 / num2;
+            break;
+        case "%":
+            if (num2 === 0) {
+                return "Error: Division by zero is not allowed.";
+            }
+            result = num1 % num2;
+            break;
+        default:
+            return "Error: Invalid operator.";
+    }
+
+    return result;
+}
+
+// Example usage
+console.log(advancedCalculator(10, 5, "+"));  // Prints: 15
+console.log(advancedCalculator(10, 5, "-"));  // Prints: 5
+console.log(advancedCalculator(10, 5, "*"));  // Prints: 50
+console.log(advancedCalculator(10, 5, "/"));  // Prints: 2
+console.log(advancedCalculator(10, 0, "/"));  // Prints: Error: Division by zero is not allowed.
+console.log(advancedCalculator(10, 5, "%"));  // Prints: 0
+console.log(advancedCalculator(10, 0, "%"));  // Prints: Error: Division by zero is not allowed.
+console.log(advancedCalculator(10, 5, "^"));  // Prints: Error: Invalid operator.
