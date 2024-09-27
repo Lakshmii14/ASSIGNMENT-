@@ -1,0 +1,25 @@
+function countProperties(obj) {
+    // Use Object.keys() to get an array of the object's property names and return its length
+    return Object.keys(obj).length;
+}
+
+// Example usage
+const person = {
+    name: "lakshmi",
+    age: 23,
+    job: "Developer"
+};
+
+const emptyObject = {};
+
+console.log(countProperties(person));      // Prints: 3
+console.log(countProperties(emptyObject)); // Prints: 0
+
+const car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2020,
+    color: "red"
+};
+
+console.log(countProperties(car));         // Prints: 4
