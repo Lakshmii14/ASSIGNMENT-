@@ -1,0 +1,15 @@
+function sumArray(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]; // Add each element to sum
+    }
+
+    return sum; // Return the total sum
+}
+
+
+console.log(sumArray([1, 2, 3, 4, 5]));        // Prints: 15
+console.log(sumArray([10, 20, 30]));            // Prints: 60
+console.log(sumArray([-1, 1, -2, 2]));          // Prints: 0
+console.log(sumArray([5, 10, 15, 20, 25, 30])); // Prints: 105
+console.log(sumArray([]));                       // Prints: 0 (sum of an empty array)
