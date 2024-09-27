@@ -1,0 +1,24 @@
+function arrayIntersection(arr1, arr2) {
+   
+    const intersection = [];
+
+   
+    for (let i = 0; i < arr1.length; i++) {
+
+        if (arr2.includes(arr1[i]) && !intersection.includes(arr1[i])) {
+            intersection.push(arr1[i]); 
+    }
+
+    return intersection; 
+}
+
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [4, 5, 6, 7, 8];
+
+console.log(arrayIntersection(array1, array2)); // Prints: [4, 5]
+
+const array3 = ['apple', 'banana', 'cherry'];
+const array4 = ['banana', 'kiwi', 'apple', 'melon'];
+
+console.log(arrayIntersection(array3, array4)); // Prints: ['apple', 'banana']
