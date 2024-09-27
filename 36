@@ -1,0 +1,21 @@
+function suggestClothing(temperature) {
+    let suggestion;
+
+    if (temperature < 0) {
+        suggestion = "Wear a heavy coat and thermal wear.";
+    } else if (temperature <= 15) {
+        suggestion = "Wear a jacket.";
+    } else if (temperature <= 25) {
+        suggestion = "Wear a light sweater.";
+    } else {
+        suggestion = "Wear shorts and a t-shirt.";
+    }
+
+    return suggestion;
+}
+
+// Example usage
+console.log(suggestClothing(-5));   // Prints: Wear a heavy coat and thermal wear.
+console.log(suggestClothing(10));   // Prints: Wear a jacket.
+console.log(suggestClothing(20));   // Prints: Wear a light sweater.
+console.log(suggestClothing(30));   // Prints: Wear shorts and a t-shirt.
