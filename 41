@@ -1,0 +1,8 @@
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+// Example usage
+console.log(reverseString("hello"));      // Prints: "olleh"
+console.log(reverseString("JavaScript"));  // Prints: "tpircSavaJ"
+console.log(reverseString("12345"));       // Prints: "54321"
