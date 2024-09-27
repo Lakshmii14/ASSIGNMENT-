@@ -1,0 +1,17 @@
+function isPalindrome(str) {
+   
+    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    
+   
+    const reversedStr = cleanedStr.split('').reverse().join('');
+    
+    
+    return cleanedStr === reversedStr;
+}
+
+// Example usage
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // Prints: true
+console.log(isPalindrome("racecar"));                         // Prints: true
+console.log(isPalindrome("hello"));                           // Prints: false
+console.log(isPalindrome("Was it a car or a cat I saw?"));   // Prints: true
+console.log(isPalindrome("malayalam);                // Prints: true
