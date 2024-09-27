@@ -1,0 +1,31 @@
+function determineGameLevel(score) {
+    let level;
+    let message;
+
+    if (score >= 0 && score <= 49) {
+        level = "Beginner";
+        message = "Keep practicing, you're doing great!";
+    } else if (score >= 50 && score <= 79) {
+        level = "Intermediate";
+        message = "Nice work! You're getting better!";
+    } else if (score >= 80 && score <= 100) {
+        level = "Advanced";
+        message = "Excellent! You're a pro!";
+    } else {
+        return "Score out of range. Please provide a score between 0 and 100.";
+    }
+
+    return `${level} - ${message}`;
+}
+
+
+// Example usage of the determineGameLevel function
+let score1 = 30;
+let score2 = 65;
+let score3 = 90;
+let score4 = 110;
+
+console.log("Score:", score1, "-", determineGameLevel(score1));  // Prints: Score: 30 - Beginner - Keep practicing, you're doing great!
+console.log("Score:", score2, "-", determineGameLevel(score2));  // Prints: Score: 65 - Intermediate - Nice work! You're getting better!
+console.log("Score:", score3, "-", determineGameLevel(score3));  // Prints: Score: 90 - Advanced - Excellent! You're a pro!
+console.log("Score:", score4, "-", determineGameLevel(score4));  // Prints: Score: 110 - Score out of range. Please provide a score between 0 and 100.
