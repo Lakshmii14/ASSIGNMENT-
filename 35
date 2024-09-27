@@ -1,0 +1,20 @@
+function calculateInvestmentReturn(principal, interestRate, years) {
+    let riskType;
+
+    if (interestRate <= 5) {
+        riskType = "Low risk";
+    } else if (interestRate <= 10) {
+        riskType = "Medium risk";
+    } else {
+        riskType = "High risk";
+    }
+
+    let totalAmount = principal + (principal * (interestRate / 100) * years);
+    return `Investment Type: ${riskType}, Total Amount: $${totalAmount.toFixed(2)}`;
+}
+
+// Example usage
+console.log(calculateInvestmentReturn(1000, 4, 5));   // Prints: Investment Type: Low risk, Total Amount: $1200.00
+console.log(calculateInvestmentReturn(1000, 7, 5));   // Prints: Investment Type: Medium risk, Total Amount: $1350.00
+console.log(calculateInvestmentReturn(1000, 12, 5));  // Prints: Investment Type: High risk, Total Amount: $1600.00
+console.log(calculateInvestmentReturn(1000, 0, 5));   // Prints: Investment Type: Low risk, Total Amount: $1000.00
