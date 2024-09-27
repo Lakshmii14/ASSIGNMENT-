@@ -1,0 +1,25 @@
+function findMaxValue(arr) {
+    // Check if the array is empty
+    if (arr.length === 0) {
+        return undefined; // Or handle as needed (e.g., throw an error)
+    }
+    
+    // Initialize max with the first element of the array
+    let max = arr[0];
+
+    // Iterate through the array to find the maximum value
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]; // Update max if current element is greater
+        }
+    }
+
+    return max; // Return the maximum value found
+}
+
+// Example usage
+console.log(findMaxValue([1, 2, 3, 4, 5]));         // Prints: 5
+console.log(findMaxValue([-10, -5, -1, 0]));        // Prints: 0
+console.log(findMaxValue([100, 200, 150, 50]));     // Prints: 200
+console.log(findMaxValue([5, 10, 15, 20, 25, 30])); // Prints: 30
+console.log(findMaxValue([]));                       // Prints: undefined
