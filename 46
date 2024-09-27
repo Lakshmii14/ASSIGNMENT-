@@ -1,0 +1,16 @@
+function countdown(start) {
+    
+    if (start < 0) {
+        console.log("Please enter a non-negative number.");
+        return;
+    }
+    
+    for (let i = start; i >= 0; i--) {
+        console.log(i); // Log the current number
+    }
+}
+
+countdown(5); // Logs: 5, 4, 3, 2, 1, 0
+countdown(3); // Logs: 3, 2, 1, 0
+countdown(0); // Logs: 0
+countdown(-2); // Logs: Please enter a non-negative number.
