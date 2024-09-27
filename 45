@@ -1,0 +1,20 @@
+function findMinValue(arr) {
+    
+    if (arr.length === 0) {
+        return undefined; // Or handle as needed (e.g., throw an error)
+    }
+    
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i]; 
+        }
+    }
+
+    return min; 
+
+
+console.log(findMinValue([10, 2, 3, 4, 5]));         // Prints: 2
+console.log(findMinValue([-10, -5, -1, 0]));        // Prints: -10
+console.log(findMinValue([100, 200, 150, 50]));     // Prints: 50
+console.log(findMinValue([5, 10, 15, 20, 25, 30])); // Prints: 5
+console.log(findMinValue([]));                       // Prints: undefined
