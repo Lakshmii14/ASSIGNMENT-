@@ -1,0 +1,20 @@
+function removeFalsyValues(arr) {
+    return arr.filter(Boolean); // Filter out all falsy values
+}
+
+// Example usage
+const array1 = [0, 1, "", "hello", false, null, undefined, NaN, 42];
+const cleanedArray1 = removeFalsyValues(array1);
+console.log(cleanedArray1); // Prints: [1, "hello", 42]
+
+const array2 = [null, 5, "world", NaN, 0, "JavaScript", false];
+const cleanedArray2 = removeFalsyValues(array2);
+console.log(cleanedArray2); // Prints: [5, "world", "JavaScript"]
+
+const array3 = [1, 2, 3, 4, 5];
+const cleanedArray3 = removeFalsyValues(array3);
+console.log(cleanedArray3); // Prints: [1, 2, 3, 4, 5]
+
+const array4 = [false, null, "", undefined, NaN];
+const cleanedArray4 = removeFalsyValues(array4);
+console.log(cleanedArray4); // Prints: []
