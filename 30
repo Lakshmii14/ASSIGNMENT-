@@ -1,0 +1,28 @@
+function weatherAdvice(weather) {
+    switch (weather.toLowerCase()) {
+        case "sunny":
+            return "Wear sunglasses.";
+        case "rainy":
+            return "Take an umbrella.";
+        case "snowy":
+            return "Wear a heavy coat.";
+        case "cloudy":
+            return "Might rain; carry an umbrella.";
+        default:
+            return "Weather condition not recognized.";
+    }
+}
+
+
+// Example usage of the weatherAdvice function
+let condition1 = "sunny";
+let condition2 = "rainy";
+let condition3 = "snowy";
+let condition4 = "cloudy";
+let condition5 = "windy";
+
+console.log("Weather:", condition1, "-", weatherAdvice(condition1));  // Prints: Weather: sunny - Wear sunglasses.
+console.log("Weather:", condition2, "-", weatherAdvice(condition2));  // Prints: Weather: rainy - Take an umbrella.
+console.log("Weather:", condition3, "-", weatherAdvice(condition3));  // Prints: Weather: snowy - Wear a heavy coat.
+console.log("Weather:", condition4, "-", weatherAdvice(condition4));  // Prints: Weather: cloudy - Might rain; carry an umbrella.
+console.log("Weather:", condition5, "-", weatherAdvice(condition5));  // Prints: Weather: windy - Weather condition not recognized.
