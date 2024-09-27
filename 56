@@ -1,0 +1,39 @@
+function findSecondMinimum(arr) {
+    if (arr.length < 2) {
+        return "Array must contain at least two numbers."; 
+    }
+
+    let firstMin = Infinity; 
+    let secondMin = Infinity; 
+
+    
+    for (let num of arr) {
+        
+
+        if (num < firstMin) {
+            secondMin = firstMin; 
+
+            firstMin = num; 
+        } else if (num < secondMin && num > firstMin) {
+            secondMin = num; 
+        }
+    }
+
+    return secondMin === Infinity ? "No second minimum number." : secondMin; // Check if second minimum was updated
+}
+
+
+const array1 = [10, 5, 3, 8, 15];
+console.log(findSecondMinimum(array1)); // Prints: 5
+
+const array2 = [7, 2, 3, 9, 6];
+console.log(findSecondMinimum(array2)); // Prints: 3
+
+const array3 = [1, 1, 1];
+console.log(findSecondMinimum(array3)); // Prints: No second minimum number.
+
+const array4 = [5];
+console.log(findSecondMinimum(array4)); // Prints: Array must contain at least two numbers.
+
+const array5 = [2, 2, 3, 4, 4];
+console.log(findSecondMinimum(array5)); // Prints: 3
