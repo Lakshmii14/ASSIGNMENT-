@@ -1,0 +1,20 @@
+function generateFibonacci(maxNumber) {
+    const fibonacciSequence = [0, 1]; 
+
+    
+    while (true) {
+        const nextNumber = fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2];
+        
+        if (nextNumber > maxNumber) {
+            break; // Stop if the next number exceeds the specified maximum number
+        }
+
+        fibonacciSequence.push(nextNumber); 
+
+    return fibonacciSequence; // Return the complete Fibonacci sequence
+}
+
+
+console.log(generateFibonacci(10));  // Prints: [0, 1, 1, 2, 3, 5, 8]
+console.log(generateFibonacci(20));  // Prints: [0, 1, 1, 2, 3, 5, 8, 13]
+console.log(generateFibonacci(1));   // Prints: [0, 1, 1]
