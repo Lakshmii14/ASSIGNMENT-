@@ -1,0 +1,26 @@
+function findLongestWord(sentence) {
+    
+    const words = sentence.split(' ');
+    let longestWord = '';
+
+
+    
+    for (let i = 0; i < words.length; i++) {
+        
+        if (words[i].length > longestWord.length) {
+            longestWord = words[i]; // Update longestWord
+        }
+    }
+
+    return longestWord; 
+}
+
+
+const sentence1 = "The quick brown fox jumped over the lazy dog";
+console.log(findLongestWord(sentence1)); // Prints: "jumped"
+
+const sentence2 = "JavaScript is a versatile programming language";
+console.log(findLongestWord(sentence2)); // Prints: "programming"
+
+const sentence3 = "I love coding";
+console.log(findLongestWord(sentence3)); // Prints: "coding"
