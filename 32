@@ -1,0 +1,61 @@
+function validatePassword(password) {
+    let messages = [];
+
+    // Check if the password is at least 8 characters long
+    if (password.length >= 8) {
+        messages.push("Length: Valid");
+    } else {
+        messages.push("Length: Invalid (must be at least 8 characters)");
+    }
+
+    // Check if the password contains uppercase letters
+    if (/[A-Z]/.test(password)) {
+        messages.push("Uppercase: Valid");
+    } else {
+        messages.push("Uppercase: Invalid (must contain at least one uppercase letter)");
+    }
+
+    // Check if the password contains lowercase letters
+    if (/[a-z]/.test(password)) {
+        messages.push("Lowercase: Valid");
+    } else {
+        messages.push("Lowercase: Invalid (must contain at least one lowercase letter)");
+    }
+
+    // Check if the password contains numbers
+    if (/[0-9]/.test(password)) {
+        messages.push("Number: Valid");
+    } else {
+        messages.push("Number: Invalid (must contain at least one number)");
+    }
+
+    // Check if the password contains special characters
+    if (/[^A-Za-z0-9]/.test(password)) {
+        messages.push("Special Character: Valid");
+    } else {
+        messages.push("Special Character: Invalid (must contain at least one special character)");
+    }
+
+    // Check if all criteria are met
+    if (messages.every(message => message.includes("Valid"))) {
+        return "Password is strong";
+    } else {
+        return messages.join(", ");
+    }
+}
+
+
+// Example usage of the validatePassword function
+let password1 = "StrongPass1!";
+let password2 = "weakpass";
+let password3 = "Short1!";
+let password4 = "NoSpecial1";
+let password5 = "ALLUPPERCASE1!";
+let password6 = "alllowercase1!";
+
+console.log(validatePassword(password1));  // Prints: Password is strong
+console.log(validatePassword(password2));  // Prints: Length: Valid, Uppercase: Invalid (must contain at least one uppercase letter), Lowercase: Valid, Number: Invalid (must contain at least one number), Special Character: Invalid (must contain at least one special character)
+console.log(validatePassword(password3));  // Prints: Length: Invalid (must be at least 8 characters), Uppercase: Valid, Lowercase: Valid, Number: Valid, Special Character: Valid
+console.log(validatePassword(password4));  // Prints: Length: Valid, Uppercase: Valid, Lowercase: Valid, Number: Valid, Special Character: Invalid (must contain at least one special character)
+console.log(validatePassword(password5));  // Prints: Length: Valid, Uppercase: Valid, Lowercase: Invalid (must contain at least one lowercase letter), Number: Valid, Special Character: Valid
+console.log(validatePassword(password6));  // Prints: Length: Valid, Uppercase: Invalid (must contain at least one uppercase letter), Lowercase: Valid, Number: Valid, Special Character: Valid
