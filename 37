@@ -1,0 +1,27 @@
+function convertCurrency(amount, currencyType) {
+    let conversionRate;
+    let convertedAmount;
+
+    switch (currencyType.toUpperCase()) {
+        case "USD":
+            conversionRate = 75;
+            break;
+        case "EUR":
+            conversionRate = 90;
+            break;
+        case "GBP":
+            conversionRate = 100;
+            break;
+        default:
+            return "Invalid currency type";
+    }
+
+    convertedAmount = amount * conversionRate;
+    return convertedAmount;
+}
+
+// Example usage
+console.log(convertCurrency(100, "USD"));  // Prints: 7500
+console.log(convertCurrency(100, "EUR"));  // Prints: 9000
+console.log(convertCurrency(100, "GBP"));  // Prints: 10000
+console.log(convertCurrency(100, "JPY"));  // Prints: Invalid currency type
