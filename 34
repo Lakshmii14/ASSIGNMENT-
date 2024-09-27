@@ -1,0 +1,26 @@
+function calculateFinalPrice(totalPrice, membershipType) {
+    let discount;
+
+    switch (membershipType.toLowerCase()) {
+        case "regular":
+            discount = 0;
+            break;
+        case "silver":
+            discount = 0.10;
+            break;
+        case "gold":
+            discount = 0.20;
+            break;
+        default:
+            return "Error: Invalid membership type.";
+    }
+
+    let finalPrice = totalPrice - (totalPrice * discount);
+    return finalPrice;
+}
+
+// Example usage
+console.log(calculateFinalPrice(100, "regular"));  // Prints: 100
+console.log(calculateFinalPrice(100, "silver"));   // Prints: 90
+console.log(calculateFinalPrice(100, "gold"));     // Prints: 80
+console.log(calculateFinalPrice(100, "platinum")); // Prints: Error: Invalid membership type.
